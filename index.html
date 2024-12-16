@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>La Consolacion Style Website</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/Icon.png" alt="Icon">
+        <div>
+            <h1>Junior Philippine Student Society for Information Technology Education LCUP</h1>
+            <h2>JPSSITE</h2>
+        </div>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About LCUP</a>
+        <a href="#">Academic Programs</a>
+        <a href="#">Student Services</a>
+        <a href="#">Research and Innovation</a>
+    </nav>
+
+    <!-- Hero Section (Image Slider) -->
+    <section class="hero">
+        <div class="slider" id="slider">
+            <img src="images/backgroundPic.jpg" alt="Slide 1">
+            <img src="images/backgroundPic2.jpg" alt="Slide 2">
+            <img src="images/bg3.jpg" alt="Slide 3">
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="#">&#xf09a; Facebook</a>
+        <a href="#">&#xf16d; Instagram</a>
+        <a href="#">&#xf099; Twitter</a>
+        <a href="#">&#xf167; YouTube</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 La Consolacion University. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        const slider = document.getElementById('slider');
+const images = document.querySelectorAll('.slider img');
+let index = 0;
+
+function slideImages() {
+    index++;
+    if (index >= images.length) {
+        index = 0; // Loop back to the first image
+    }
+    slider.style.transform = `translateX(${-index * 100}%)`;
+}
+
+// Slide every 4 seconds
+setInterval(slideImages, 4000);
+
+
+    </script>
+</body>
+
+</html>
